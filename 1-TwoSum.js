@@ -21,6 +21,7 @@ const twoSum2 = function (nums, target) {
 	}
 };
 
+// different approach
 const twoSum3 = function (nums, target) {
 	let obj = {};
 
