@@ -7,15 +7,16 @@ function isPalindrome(x) {
 	// Convert the number to a string and reverse it
 	const reversedStr = x.toString().split("").reverse().join("");
 
-	// Compare the original number and the reversed string
 	console.log(x === parseInt(reversedStr));
-
+	
+	// Compare the original number and the reversed string
 	return x === parseInt(reversedStr);
 }
 
 isPalindrome(121); // true
 
-// Solution 2 => 2 pointer approach
+// Solution 2 
+// 2 pointer approach
 
 const isPalindrome = x => {
 	if (x < 0) return false;
