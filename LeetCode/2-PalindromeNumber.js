@@ -8,14 +8,14 @@ function isPalindrome(x) {
 	const reversedStr = x.toString().split("").reverse().join("");
 
 	console.log(x === parseInt(reversedStr));
-	
+
 	// Compare the original number and the reversed string
 	return x === parseInt(reversedStr);
 }
 
 isPalindrome(121); // true
 
-// Solution 2 
+// Solution 2
 // 2 pointer approach
 
 const isPalindrome = x => {
