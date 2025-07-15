@@ -6,7 +6,6 @@
 3. Convert the array back to string (join method)
  */
 
-const str = "☃️ test 🇺🇳 coffee ☕️ hello 👩🏾‍🔬";
 
 // 1. Classic built-ins (split / reverse / join)
 const reversedStr1 = str => str.split("").reverse().join("");
@@ -71,11 +70,12 @@ const reverseStr10 = str => {
 };
 
 // 11. Using Intl.Segmenter (Unicode-aware)
+//const str = "☃️ test 🇺🇳 coffee ☕️ hello 👩🏾‍🔬";
 
 const segmenter = new Intl.Segmenter();
 const reversed = Array.from(segmenter.segment(str), seg => seg.segment)
 	.reverse()
 	.join("");
 
-//console.log(reversedStr1("hello"));
+console.log(reversedStr1("hello"));
 console.log(reversed);

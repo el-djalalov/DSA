@@ -10,7 +10,7 @@ function chunk(arr, chunkSize) {
 	let currentChunk = [];
 
 	for (const num of arr) {
-		currentChunk.push(num); // Put numbers into current chunk array
+		currentChunk.push(num);
 		if (currentChunk.length === chunkSize) {
 			resultArr.push(currentChunk);
 			currentChunk = [];
