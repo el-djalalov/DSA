@@ -131,12 +131,34 @@ class LinkedList {
 	clearAll() {
 		this.head = null;
 	}
+
+	reverse() {
+		if (this.length <= 1) return this;
+		let prev = null;
+		let current = this.head;
+
+		let originalHead = this.head;
+
+		// For every node in the list we do 4 operations.
+		while (current) {
+			let next = current.next; // 1
+			current.next = prev; // 2
+			prev = current; // 3
+			current = next; // 4
+		}
+
+		this.head = prev;
+		this.tail = originalHead;
+		return this;
+	}
 }
 
 const myLinkedList = new LinkedList(1);
 myLinkedList.push(10);
 myLinkedList.push(20);
 myLinkedList.push(30);
-console.log(myLinkedList.getFirst());
-console.log(myLinkedList.set(3, 100));
-console.log(myLinkedList.size());
+myLinkedList.push(40);
+myLinkedList.push(50);
+myLinkedList.push(60);
+console.log(myLinkedList);
+console.log(myLinkedList.reverse());
