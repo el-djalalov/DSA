@@ -7,9 +7,18 @@ factorial(4) = 4*3*2*1 = 24
 factorial(5) = 5*4*3*2*1 = 120
 */
 
-function factorial(n) {}
+function factorial(n) {
+	let result = 1;
 
-console.log(factorial(0));
-console.log(factorial(2));
-console.log(factorial(3));
-console.log(factorial(7));
+	for (let i = 2; i <= n; i++) {
+		result = result * i;
+	}
+
+	return result;
+}
+
+console.log(factorial(0)); // 1
+console.log(factorial(1)); // 1
+console.log(factorial(2)); // 2
+console.log(factorial(3)); // 6
+console.log(factorial(7)); // 5040
