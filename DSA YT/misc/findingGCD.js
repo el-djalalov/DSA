@@ -84,5 +84,13 @@ Output: 21
 Zero Handling: The GCD of a and 0 is a (as seen in the recursive function's base case).
 Negative Numbers: The GCD is always non-negative. For negative inputs, take absolute values first.
 Single Number: The GCD of a single number is the number itself, but the GCDMultiple function enforces at least two inputs.
-
 */
+
+console.log("GCD of 48 and 18:", GCD(48, 18)); // Output: 6
+console.log("GCD of 24, 36, and 60:", GCDMultiple(24, 36, 60)); // Output: 12
+console.log("GCD of 1071 and 462:", GCD(1071, 462)); // Output: 21
+console.log("GCD of 1220 and 516 using recursion:", GCDRecursive(1220, 516)); // Output: 4
+console.log("GCD of 1220 and 516 using iterative method:", GCD(1220, 516)); // Output: 4
+console.log("GCD of 0 and 5:", GCD(0, 5)); // Output: 5
+console.log("GCD of 5 and 0:", GCD(5, 0)); // Output: 5
+console.log("GCD of 0 and 0:", GCD(0, 0)); // Output: 0
