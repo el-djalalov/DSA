@@ -27,7 +27,18 @@ function GCD(a, b) {
 	}
 	return b;
 }
+console.log("GCD of 48 and 18:", GCD(48, 18)); // Output: 6
+console.log("GCD of 1071 and 462:", GCD(1071, 462)); // Output: 21
 // Here's the Javascript Code to Perform GCD using Recursion:
+/*
+Example 3: GCD of Large Numbers
+Input: GCD(1071, 462)
+Steps:
+1071 % 462 = 147 → a = 462, b = 147
+462 % 147 = 21 → a = 147, b = 21
+147 % 21 = 0 → Stop. GCD is 21.
+Output: 21
+*/
 
 function GCDRecursive(a, b) {
 	if (b === 0) {
@@ -72,13 +83,7 @@ Steps:
 Compute GCD(24, 36) = 12.
 Compute GCD(12, 60) = 12.
 Output: 12
-Example 3: GCD of Large Numbers
-Input: GCD(1071, 462)
-Steps:
-1071 % 462 = 147 → a = 462, b = 147
-462 % 147 = 21 → a = 147, b = 21
-147 % 21 = 0 → Stop. GCD is 21.
-Output: 21
+
 
 *Edge Cases and Notes
 Zero Handling: The GCD of a and 0 is a (as seen in the recursive function's base case).
@@ -86,9 +91,7 @@ Negative Numbers: The GCD is always non-negative. For negative inputs, take abso
 Single Number: The GCD of a single number is the number itself, but the GCDMultiple function enforces at least two inputs.
 */
 
-console.log("GCD of 48 and 18:", GCD(48, 18)); // Output: 6
 console.log("GCD of 24, 36, and 60:", GCDMultiple(24, 36, 60)); // Output: 12
-console.log("GCD of 1071 and 462:", GCD(1071, 462)); // Output: 21
 console.log("GCD of 1220 and 516 using recursion:", GCDRecursive(1220, 516)); // Output: 4
 console.log("GCD of 1220 and 516 using iterative method:", GCD(1220, 516)); // Output: 4
 console.log("GCD of 0 and 5:", GCD(0, 5)); // Output: 5

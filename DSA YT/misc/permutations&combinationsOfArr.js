@@ -48,11 +48,6 @@ const permute2 = (nums, arr = [], res = []) => {
 	if (nums.length === 0) res.push([...arr]); //if nums is empty, push the current permutation to res
 
 	for (let i = 0; i < nums.length; i++) {
-		console.log(
-			`nums: ${nums}, arr: ${[...arr]}, i: ${i}, nums[i]: ${
-				nums[i]
-			}  res: ${res}`
-		);
 		let rest = nums.filter((n, index) => index !== i);
 		//add current element to arr
 		arr.push(nums[i]);
