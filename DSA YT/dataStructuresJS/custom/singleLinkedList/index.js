@@ -1,3 +1,13 @@
+/* Linked List
+A linked list is a linear data structure that includes a series of connected nodes.
+Each node consists of a data value and a pointer that points to the next node.
+The list elements can be easily inserted or removed without reallocation or reorganization of the entire structure.
+Random access of elements is not feasible, and accessing an element has linear time complexity.
+The linked list data structure supports three main operations:
+-Insertion - to add an element at the beginning, end, or at a given index in the list.
+-Deletion - to remove an item given its index or value.
+-Search - to find an element given its value. */
+
 class Node {
 	constructor(value) {
 		this.value = value;
@@ -30,21 +40,27 @@ class LinkedList {
 	}
 	pop() {
 		if (!this.head) return undefined;
-		let temp,
-			prev = this.head;
 
+		let temp = this.head;
+		let prev = null;
+
+		if (this.length === 1) {
+			const poppedNode = this.head;
+			this.head = null;
+			this.tail = null;
+			this.length--;
+			return poppedNode;
+		}
+
+		// Traverse the list to find the last node
 		while (temp.next) {
 			prev = temp;
-			temp = prev.next;
+			temp = temp.next;
 		}
+
 		this.tail = prev;
 		this.tail.next = null;
 		this.length--;
-
-		if (this.length === 0) {
-			this.head = this.tail = null;
-		}
-
 		return temp;
 	}
 
@@ -159,6 +175,6 @@ myLinkedList.push(20);
 myLinkedList.push(30);
 myLinkedList.push(40);
 myLinkedList.push(50);
-myLinkedList.push(60);
+myLinkedList.pop();
 console.log(myLinkedList);
 console.log(myLinkedList.reverse());

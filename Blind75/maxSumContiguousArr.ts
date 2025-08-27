@@ -17,7 +17,8 @@ function maxSumSubArray(nums: number[]): number {
 }
 
 console.log(maxSumSubArray([-1, 5, -3, 9, -11]));
-
+// Optimal solution with linear time complexity, O(N), and constant space complexity, O(1).
+// This solution is also called Kadane's Algorithm
 function maxSubArr2(nums: number[]): number {
 	let currentMax = 0;
 	let result = -Infinity;
