@@ -10,7 +10,6 @@ function findDuplicates(numbers: number[]): boolean {
 }
 
 // Better way is with Set
-
 function findDuplicates2(numbers: number[]): boolean {
 	const seen: Set<number> = new Set();
 

@@ -78,10 +78,9 @@ class LinkedList {
 
 	shift() {
 		if (!this.head) undefined;
-
-		const temp = this.head;
-		this.head = this.head.next;
-		temp.next = null;
+		const temp = this.head; // store the current head
+		this.head = this.head.next; // point head to the next node
+		temp.next = null; // disconnected the pointer of the old head from the list
 		this.length--;
 		return temp;
 	}
@@ -121,7 +120,7 @@ class LinkedList {
 		return false;
 	}
 
-	insertMiddle(index, value) {
+	insert(index, value) {
 		if (index === 0) return this.unshift(value);
 		if (index === this.length) return this.push(value);
 
@@ -157,10 +156,10 @@ class LinkedList {
 
 		// For every node in the list we do 4 operations.
 		while (current) {
-			let next = current.next; // 1
-			current.next = prev; // 2
-			prev = current; // 3
-			current = next; // 4
+			let next = current.next; // 1. create var called "next" and set this to the next node
+			current.next = prev; // 2. current node next pointer will be pointed to the prev which is null initially
+			prev = current; // 3. we will then move prev var to the current node
+			current = next; // 4. and last, we move current var to next
 		}
 
 		this.head = prev;

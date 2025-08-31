@@ -13,7 +13,7 @@ const twoSum = function (nums, target) {
 		}
 	}
 };
-// This is can return correct values, but if 1 pair is at the end it can not because of i + 1
+// This can return correct values, but if 1 pair is at the end it can not because of i + 1
 
 // 2. Optimal solution
 const twoSum2 = function (nums, target) {
