@@ -7,6 +7,12 @@ function climbingStairs(n) {
 	return noOfWays[n - 1];
 }
 
+// Recursive (fibonacci)
+function climbingStairs2(m) {
+	if (n <= 2) return n;
+	return climbingStairs(n - 1) + climbingStairs(n - 2); // fibonacci
+}
+
 console.log(climbingStairs(1));
 console.log(climbingStairs(2));
 console.log(climbingStairs(3));

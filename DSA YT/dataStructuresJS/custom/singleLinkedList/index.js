@@ -88,13 +88,13 @@ class LinkedList {
 		return this.head;
 	}
 	getLast() {
-		if (!this.haed) null;
+		if (!this.head) return null;
 
-		let temp = this.haed;
-		while (temp) {
-			if (!temp.next) temp;
+		let temp = this.head;
+		while (temp.next) {
 			temp = temp.next;
 		}
+		return temp;
 	}
 
 	get(index) {
@@ -109,7 +109,7 @@ class LinkedList {
 		return null;
 	}
 
-	set(index, value) {
+	setValue(index, value) {
 		let temp = this.get(index);
 
 		if (temp) {
@@ -120,7 +120,7 @@ class LinkedList {
 		return false;
 	}
 
-	insert(index, value) {
+	insertNode(index, value) {
 		if (index === 0) return this.unshift(value);
 		if (index === this.length) return this.push(value);
 
@@ -176,4 +176,4 @@ myLinkedList.push(40);
 myLinkedList.push(50);
 myLinkedList.pop();
 console.log(myLinkedList);
-console.log(myLinkedList.reverse());
+console.log(myLinkedList.getLast());

@@ -1,7 +1,5 @@
-/* 
-Given 2 strings, write a func to determine if the second string is an anagram of the first. 
-Anagram is a word or name formed by rearranging the letters of another such as cinema => iceman.
-*/
+/* Given 2 strings, write a func to determine if the second string is an anagram of the first.
+Anagram is a word or name formed by rearranging the letters of another such as cinema => iceman. */
 
 function anagram(str1, str2) {
 	if (str1.length !== str2.length) {

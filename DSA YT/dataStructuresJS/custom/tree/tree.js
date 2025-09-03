@@ -82,9 +82,6 @@ class BST {
 
 	dfsPreOrder(node = this.root, data = []) {
 		if (node === null) return data;
-
-		console.log("---------", data);
-
 		data.push(node.value);
 
 		if (node.left) this.dfsPreOrder(node.left, data);
