@@ -1,3 +1,16 @@
+/* Binary Search Tree (BST)
+-Insertion order of nodes in a Binary Search Tree (BST) affects its structure and efficiency.
+-A balanced BST ensures optimal performance for search, insertion, and deletion operations.
+-Unbalanced trees can lead to degraded performance, resembling a linked list in the worst case.
+-A balanced BST maintains a height of O(log n), while an unbalanced tree can have a height of O(n).
+-Rotations (left and right) are used to maintain balance in self-balancing trees like AVL and Red-Black Trees.
+-Overall there are 4 types of rotations:
+-1. Right-Right Rotation (Single) RR
+-2. Left-Left Rotation (Single) LL
+-3. Left-Right Rotation (Double) LR
+-4. Right-Left Rotation (Double) RL
+*/
+
 class Node {
 	constructor(value) {
 		this.value = value;
