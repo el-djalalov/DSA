@@ -29,3 +29,28 @@ function binaryTreeLevelOrderTraversal(root: TreeNode | null): number[][] {
 
 	return levels;
 }
+
+// Solution 2 - Using iteration
+function binaryTreeLevelOrderTraversalIterative(
+	root: TreeNode | null
+): number[][] {
+	if (!root) return [];
+
+	let queue: TreeNode[] = [root];
+	let result: number[][] = [];
+
+	while (queue.length) {
+		const levelSize = queue.length;
+		const currentLevel: number[] = [];
+
+		for (let i = 0; i < levelSize; i++) {
+			const node = queue.shift()!;
+			currentLevel.push(node.val);
+
+			if (node.left) queue.push(node.left);
+			if (node.right) queue.push(node.right);
+		}
+		result.push(currentLevel);
+	}
+	return result;
+}
