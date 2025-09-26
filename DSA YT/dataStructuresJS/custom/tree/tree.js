@@ -1,4 +1,4 @@
-/* Binary Search Tree (BST)
+/* Binary Search Tree (BST) : Its a tree with the value of each tree node being greater than all the values in the node's left subtree and less than the ones in its right subtree
 -Insertion order of nodes in a Binary Search Tree (BST) affects its structure and efficiency.
 -A balanced BST ensures optimal performance for search, insertion, and deletion operations.
 -Unbalanced trees can lead to degraded performance, resembling a linked list in the worst case.
@@ -73,6 +73,8 @@ class BST {
 		return false;
 	}
 
+	// There are different ways of traversal. Starting with BFS (Breadth First Search)
+	// This is basically means traversal starts at the tree root and explores all the nodes at the current depth before moving on to the nodes at the next depth
 	bfs() {
 		// Breadth First Search
 
@@ -93,6 +95,9 @@ class BST {
 		return data;
 	}
 
+	// Another traversal is called DFS (Depth First Search) starts at the root node and explores as fas as possible along each branch before backtracking. There are different orderings for how we track the nodes we have visited for DFS
+
+	// PreOrder DFS is exploring each branch, processing each parent node before its children
 	dfsPreOrder(node = this.root, data = []) {
 		if (node === null) return data;
 		data.push(node.value);
@@ -102,6 +107,7 @@ class BST {
 		return data;
 	}
 
+	// PostOrder DFS traversal means start visitng root node, go over to its children and go visit all the node on the way to bottom, only precessing a node after we've visited its children
 	dfsPostOrder(node = this.root, data = []) {
 		if (node === null) return data;
 
@@ -112,6 +118,7 @@ class BST {
 		return data;
 	}
 
+	// Process each node's left children to the bottom, then its right children, this ordering will give us teh nodes in ascending order
 	dfsInOrder(node = this.root, data = []) {
 		if (node === null) return data;
 		if (node.left) this.dfsInOrder(node.left, data);
