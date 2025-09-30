@@ -44,6 +44,7 @@ export default function kthSmallestElementInBST(
 let root: TreeNode = new Node(10);
 root.left = new Node(6);
 root.right = new Node(11);
+
 root.left.left = new Node(3);
 root.left.right = new Node(7);
 root.left.left.left = new Node(2);
