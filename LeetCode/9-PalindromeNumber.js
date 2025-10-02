@@ -1,16 +1,13 @@
 function isPalindrome(x) {
 	// Handle negative numbers and 0
-	if (x < 0) {
-		return false;
-	}
-
+	if (x < 0) return false;
+	const str = x.toString();
 	// Convert the number to a string and reverse it
-	const reversedStr = x.toString().split("").reverse().join("");
-
+	const reversedStr = str.split("").reverse().join("");
 	console.log(x === parseInt(reversedStr));
 
 	// Compare the original number and the reversed string
-	return x === parseInt(reversedStr);
+	return str === reversedStr;
 }
 
 isPalindrome(121); // true
