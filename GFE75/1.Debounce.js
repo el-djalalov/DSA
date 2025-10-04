@@ -9,7 +9,7 @@ function debounce(func, wait = 0) {
 
 	return function (...args) {
 		const context = this;
-		if (timerId !== null) {
+		if (timerId) {
 			clearTimeout(timerId);
 		}
 

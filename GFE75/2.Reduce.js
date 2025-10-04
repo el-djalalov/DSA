@@ -1,7 +1,7 @@
 Array.prototype.myReduce = function (callback, initialValue) {
 	const arr = this;
 
-	if (arr.length === 0 && initialValue === undefined) {
+	if (arr.length === 0 && !initialValue) {
 		throw new TypeError("Reduce of empty array with no initial value");
 	}
 	let acc;

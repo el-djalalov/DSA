@@ -9,7 +9,7 @@ export default function classNames(...args) {
 		if (typeof arg === "string" || typeof arg === "number") {
 			result.push(arg);
 		} else if (Array.isArray(arg)) {
-			result.puhs(classNames(...arg)); // recursive flatten
+			result.push(classNames(...arg)); // recursive flatten
 		} else if (typeof arg === "object") {
 			for (const key in arg) {
 				if (arg[key]) {
